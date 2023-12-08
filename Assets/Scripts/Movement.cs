@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed = 5f;
-
-    void Update()
+    [SerializeField] private GameObject canvas;
+    private void Start()
     {
-        // Klavye girişini al
-        float horizontalInput = Input.GetAxis("Horizontal");
-        /*float verticalInput = Input.GetAxis("Vertical");*/
-
-        // Hareket vektörünü oluştur
-        Vector2 movement = new Vector2(horizontalInput,0/*, verticalInput*/);
-
-        // Rigidbody2D bileşenine hareketi uygula
-        GetComponent<Rigidbody2D>().velocity = movement * speed;
+        canvas.SetActive(false);
     }
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.A))
+        {
+            canvas.SetActive(true);
+            Debug.Log("Çalışsana amk");
+        }
+    
+        else
+        {
+            canvas.SetActive(false);
+        }
+    }
+    
 }
