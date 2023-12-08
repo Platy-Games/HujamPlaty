@@ -1,2 +1,11 @@
-# HujamPlaty
-İyi şanslar bize
+# Oyun Fikirleri
+- Tower Defense
+- Uzay gemisi
+	- uzay gemisinde 
+- Bölüm bölüm ilerleyen tasarım (Gezegen gezegen)
+- Gezegenden gezegene geçerken düşman hordeları
+- Gezegen Atölye olacak - upgrade kısmı
+- Gezegene inmenin bedeli olacak
+- Yakıt mekaniği
+- Saldırı sırasında toplanabilecek currency
+- 
