@@ -22,6 +22,7 @@ public class MeteoriteSpawner : MonoBehaviour
         GameObject selectedObject = spawnNesneleri[Random.Range(0, spawnNesneleri.Length)];
 
         // Nesneyi ekrana spawn et
+        //TODO gemiye denk gelmeyecek şekilde spawn et
         Vector2 spawnPosition = new Vector2(transform.position.x, Random.Range(-5f, 5f));
         GameObject spawnedObject = Instantiate(selectedObject, spawnPosition, Quaternion.identity);
 
