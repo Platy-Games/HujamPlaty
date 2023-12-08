@@ -5,22 +5,26 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
+
     private void Start()
     {
         canvas.SetActive(false);
     }
+
     private void Update()
     {
-        if(Input.GetKey(KeyCode.A))
         {
-            canvas.SetActive(true);
-            Debug.Log("Çalışsana amk");
+            Invoke("OpenCanvas", 1.5f);
+            Debug.Log("Çalışşşş köle");
         }
-    
         else
         {
             canvas.SetActive(false);
         }
     }
-    
+
+    private void OpenCanvas()
+    {
+        canvas.SetActive(true);
+    }
 }
