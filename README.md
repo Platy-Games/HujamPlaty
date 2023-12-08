@@ -1,1 +1,2 @@
 # HujamPlaty
+İyi şanslar bize
