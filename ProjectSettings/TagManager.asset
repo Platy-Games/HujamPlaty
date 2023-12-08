@@ -6,14 +6,18 @@ TagManager:
   tags:
   - bullet
   - Meteor
+  - enemyShip
+  - FuturisticShip
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - enemyShip
   - Water
   - UI
   - Meteorite
+  - cmera
+  - laser
   - 
   - 
   - 
