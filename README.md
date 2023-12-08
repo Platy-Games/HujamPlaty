@@ -4,8 +4,13 @@
 	- uzay gemisinde 
 - Bölüm bölüm ilerleyen tasarım (Gezegen gezegen)
 - Gezegenden gezegene geçerken düşman hordeları
+	- saldırganların bazıları özel gemiler olsun onları yok edince özel şeyler çekip gezegenlerde satabilsek
 - Gezegen Atölye olacak - upgrade kısmı
 - Gezegene inmenin bedeli olacak
 - Yakıt mekaniği
 - Saldırı sırasında toplanabilecek currency
-- 
+- Companion
+- Risk ödül sistemi
+	- Gezegene inmeyip bir sonraki gezegene kadar ilerleme şansı
+	- Gezegene inince tüm currencyi bırakma zorunluluğu
+- Gold Miner
