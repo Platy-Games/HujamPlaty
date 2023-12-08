@@ -15,20 +15,20 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             Invoke("OpenCanvas", 1.5f);
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.A))
         {
             canvas.SetActive(false);
         }
     
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             Invoke("OpenCanvas1", 1.5f);
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.D))
         {
             canvas1.SetActive(false);
         }
