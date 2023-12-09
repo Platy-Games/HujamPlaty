@@ -160,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNesneleri:
   - {fileID: 374482894}
+  - {fileID: 2941695037114820452, guid: bd8bf975779249698be144b0a1b99140, type: 3}
   minSpawnHizi: 10
   maxSpawnHizi: 20
   solaDogruHiz: 2
