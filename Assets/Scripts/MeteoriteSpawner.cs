@@ -5,15 +5,14 @@ using UnityEngine;
 public class MeteoriteSpawner : MonoBehaviour
 {
     [SerializeField] private  GameObject[] spawnNesneleri; // Spawner tarafından oluşturulacak nesnelerin listesi
-    [SerializeField] private float minSpawnHizi = 1f; // Minimum nesne oluşturma hızı (saniyede bir)
-    [SerializeField] private float maxSpawnHizi = 5f; // Maximum nesne oluşturma hızı (saniyede bir)
+    [SerializeField] private float spawnSpeed = 3f; 
     [SerializeField] private float solaDogruHiz = 5f; // Nesnelere eklenecek sola doğru hız
     [SerializeField] private float nesneOmru = 5f; // Nesnenin ömrü (saniye)
 
     void Start()
     {
         // Belirli aralıklarla SpawnObject fonksiyonunu çağır
-        InvokeRepeating("SpawnObject", 0f, Random.Range(minSpawnHizi, maxSpawnHizi));
+        InvokeRepeating("SpawnObject", 0f,1f / spawnSpeed);
     }
 
     void SpawnObject()
@@ -41,8 +40,5 @@ public class MeteoriteSpawner : MonoBehaviour
 
         // Nesnenin belirli bir süre sonra yok olmasını sağla
         Destroy(spawnedObject, nesneOmru);
-
-        // Bir sonraki spawn için yeni bir random hız belirle
-        Invoke("SpawnObject", Random.Range(minSpawnHizi, maxSpawnHizi));
     }
 }
