@@ -1,26 +1,29 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class bulletScript : MonoBehaviour
+public class LaserScript : MonoBehaviour
 {
     public float DestroyTime;
     public float speed;
     Vector3 targetPos;
     Vector3 direction;
+
+    private Transform Player;
     [SerializeField] private GameObject meteorPrefab;
-    private void Start()
+    
+    // Start is called before the first frame update
+    void Start()
     {
-        Destroy(gameObject,DestroyTime);
-
-
-        targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Destroy(gameObject, DestroyTime);
+        Player = GameObject.FindWithTag("Player").transform;
+        targetPos = Player.transform.position;
         targetPos.z = 0f;
 
         direction = (targetPos - transform.position).normalized;
     }
+
+    // Update is called once per frame
     private void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
@@ -35,11 +38,10 @@ public class bulletScript : MonoBehaviour
             if (other.transform.CompareTag("BigMeteor"))
             {
                 var position = other.transform.position;
-                Instantiate(meteorPrefab, new Vector3(position.x + 1, position.y + 1),Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
+                Instantiate(meteorPrefab, new Vector3(position.x + 1, position.y + 1), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
                 Instantiate(meteorPrefab, new Vector3(position.x - 1, position.y - 1), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
-                        
+
             }
-            Destroy(other.gameObject);
         }
         Destroy(gameObject);
     }
