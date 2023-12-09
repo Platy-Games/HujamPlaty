@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class EnemyFire : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject bulletPrefab;
+    public Transform spawnPos;
+    [SerializeField] private float cooldown;
+    private bool _isCooldownOver;
+
+    private void Start()
     {
-        
+        _isCooldownOver = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (_isCooldownOver)
+        {
+            StartCoroutine(SetCooldown());
+            CreateABullet();
+        }
+
+    }
+
+    void CreateABullet()
+    {
+        GameObject instance = Instantiate(bulletPrefab, spawnPos.position, Quaternion.identity);
+    }
+
+    private IEnumerator SetCooldown()
+    {
+        _isCooldownOver = false;
+        yield return new WaitForSeconds(cooldown);
+        _isCooldownOver = true;
     }
 }
