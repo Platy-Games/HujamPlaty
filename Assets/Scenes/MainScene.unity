@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4184759664205330957, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5311333722380120750, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: m_LocalPosition.x
@@ -377,6 +377,10 @@ PrefabInstance:
       propertyPath: spawnSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
+      propertyPath: objectLifetime
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -412,7 +416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5004156895298546109, guid: d6ebfbe41e2b0a396b99016e01f86496, type: 3}
       propertyPath: shakeDuration
-      value: 0.5
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004156895298546109, guid: d6ebfbe41e2b0a396b99016e01f86496, type: 3}
+      propertyPath: immobilizeTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5004156895298546109, guid: d6ebfbe41e2b0a396b99016e01f86496, type: 3}
       propertyPath: shakeMagnitude
