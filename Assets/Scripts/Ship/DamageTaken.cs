@@ -9,6 +9,7 @@ public class DamageTaken : MonoBehaviour
     [SerializeField] private GameObject bigMeteorPrefab;
     [SerializeField] private GameObject meteorPrefab;
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject EnemyBulletsPrefab;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +18,11 @@ public class DamageTaken : MonoBehaviour
             ShipHealth -= 25;
             Destroy(collision.gameObject);
             Debug.Log("Ship Health -25 New Health = " + ShipHealth);
+        }
+        else if (collision.CompareTag("EnemyBullets"))
+        {
+            ShipHealth -= 20;
+            Destroy(collision.gameObject);
         }
         else if (collision.CompareTag("Meteor"))
         {
@@ -31,9 +37,4 @@ public class DamageTaken : MonoBehaviour
             Debug.Log("Ship Health -30 New Health = " + ShipHealth);
         }
     }
-    /*if (other.CompareTag("EnemyBullets"))
-    {
-        ShipHealth -= 20;
-        Destroy(other.gameObject);
-    }*/
 }

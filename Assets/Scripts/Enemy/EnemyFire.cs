@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyFire : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Transform spawnPos;
     [SerializeField] private float cooldown;
     private bool _isCooldownOver;
 
@@ -26,7 +25,7 @@ public class EnemyFire : MonoBehaviour
 
     void CreateABullet()
     {
-        GameObject instance = Instantiate(bulletPrefab, spawnPos.position, Quaternion.identity);
+        GameObject instance = Instantiate(bulletPrefab, gameObject.transform.position, Quaternion.identity);
     }
 
     private IEnumerator SetCooldown()
