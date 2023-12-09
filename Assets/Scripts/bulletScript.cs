@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,5 +22,11 @@ public class bulletScript : MonoBehaviour
     private void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Destroy(other.gameObject);
+        Destroy(gameObject);
     }
 }
