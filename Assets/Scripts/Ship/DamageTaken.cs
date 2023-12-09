@@ -26,7 +26,7 @@ public class DamageTaken : MonoBehaviour
         else if (collision.CompareTag("Enemy"))
         {
             ShipHealth -= 30;
-            DestroyImmediate(collision.gameObject);
+            Destroy(collision.gameObject);
             Debug.Log("Ship Health -30 New Health = " + ShipHealth);
         }
     }

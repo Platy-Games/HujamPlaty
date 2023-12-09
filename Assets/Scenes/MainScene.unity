@@ -450,9 +450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c221ed447e137c408c3119f29b1e7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigMeteorPrefab: {fileID: 0}
-  meteorPrefab: {fileID: 0}
-  enemyPrefab: {fileID: 0}
+  bigMeteorPrefab: {fileID: 2941695037114820452, guid: bd8bf975779249698be144b0a1b99140, type: 3}
+  meteorPrefab: {fileID: 2941695037114820452, guid: 0e71b01d50b4578b8b4e56dba76f84fe, type: 3}
+  enemyPrefab: {fileID: 6685627900709232980, guid: a24e3025604e74b93be0de42afea80b9, type: 3}
 --- !u!114 &1572869993
 MonoBehaviour:
   m_ObjectHideFlags: 0
