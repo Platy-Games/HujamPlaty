@@ -26,7 +26,7 @@ public class bulletScript : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         var healthCounter = other.transform.GetComponent<HealthCounter>();
         healthCounter.CurrentHealth -= 25;
