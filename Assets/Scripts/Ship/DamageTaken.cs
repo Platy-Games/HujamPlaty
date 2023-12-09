@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class DamageTaken : MonoBehaviour
 {
-    [SerializeField] private GameObject BigMeteor;
-    [SerializeField] private GameObject Meteor;
-    [SerializeField] private GameObject EnemyBullets;
-    [SerializeField] private GameObject Enemy;
-
     private int ShipHealth = 100;
-
-    void OnTriggerEnter2D(Collider2D other)
+    // TODO: On collision with respective object, the object such as meteors do not respawn.
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("BigMeteor"))
+        if (collision.CompareTag("BigMeteor"))
         {
             ShipHealth -= 25;
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
-        if (other.CompareTag("Meteor"))
+        else if (collision.CompareTag("Meteor"))
         {
             ShipHealth -= 15;
-            Destroy(other.gameObject);
-            Debug.Log("Ship Healt -15." + ShipHealth);
+            Destroy(collision.gameObject);
+            Debug.Log("Ship Health -15 New Health = " + ShipHealth);
         }
-        if (other.CompareTag("Enemy"))
+        else if (collision.CompareTag("Enemy"))
         {
             ShipHealth -= 30;
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("EnemyBullets"))
-        {
-            ShipHealth -= 20;
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
+            Debug.Log("Ship Health -30 New Health = " + ShipHealth);
         }
     }
+    /*if (other.CompareTag("EnemyBullets"))
+    {
+        ShipHealth -= 20;
+        Destroy(other.gameObject);
+    }*/
 }
