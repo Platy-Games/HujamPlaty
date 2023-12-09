@@ -29,7 +29,7 @@ public class bulletScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         var healthCounter = other.transform.GetComponent<HealthCounter>();
-        healthCounter.CurrentHealth -= 25;
+        healthCounter.CurrentHealth -= 50;
         if (healthCounter.CurrentHealth <= 0)
         {
             if (other.transform.CompareTag("BigMeteor"))
