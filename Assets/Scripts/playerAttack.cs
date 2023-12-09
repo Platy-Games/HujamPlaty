@@ -6,10 +6,11 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Transform spawnPos;
+    private Transform _spawnPos;
     [SerializeField] private float cooldown;
     private void Start()
     {
+        _spawnPos = GetComponent<Transform>();
         _isCooldownOver = true;
     }
 
@@ -24,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
     }
     void CreateABullet()
     {
-        GameObject instance = Instantiate(bulletPrefab, spawnPos.position, Quaternion.identity);
+        GameObject instance = Instantiate(bulletPrefab, _spawnPos.position, Quaternion.identity);
     }
 
     private bool _isCooldownOver;
