@@ -22,7 +22,6 @@ public class playerAttack : MonoBehaviour
             animator.SetFloat("Fire", fire);
             
         }
-
     }
     void CreateABullet()
     {

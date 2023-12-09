@@ -6,6 +6,10 @@ TagManager:
   tags:
   - bullet
   - Meteor
+  - weaponPanel
+  - armorPanel
+  - hookPanel
+  - speedPanel
   layers:
   - Default
   - TransparentFX
