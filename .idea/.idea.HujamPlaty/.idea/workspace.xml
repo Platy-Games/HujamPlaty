@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a8cf030-e4a4-4c72-a260-c16586053780" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/bulletScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/bulletScript.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1a8cf030-e4a4-4c72-a260-c16586053780" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
