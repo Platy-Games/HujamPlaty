@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,5 +23,15 @@ public class EnemyMovement : MonoBehaviour
 
         // Move towards the target
         transform.Translate(moveDirection * leftwardSpeed * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            //TODO animation explosion
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
