@@ -15,7 +15,7 @@ public class DamageTaken : MonoBehaviour
     {
         if (other.CompareTag("BigMeteor"))
         {
-            ShipHealth -= 50;
+            ShipHealth -= 25;
             Destroy(other.gameObject);
         }
         if (other.CompareTag("Meteor"))

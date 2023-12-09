@@ -26,7 +26,15 @@ public class bulletScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Destroy(other.gameObject);
+        if (other.transform.CompareTag("BigMeteor"))
+        {
+            var healthCounter = other.transform.GetComponent<HealthCounter>();
+            healthCounter.CurrentHealth -= 25;
+            if (healthCounter.CurrentHealth <= 0)
+            {
+                Destroy(other.gameObject);
+            }
+        }
         Destroy(gameObject);
     }
 }
