@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: cd06c958b3a783044a8479dbc636610f
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ship_gif (1)_Clip
+    second: {fileID: 7400000, guid: 21225a6d00fed86b7b576bc6dc81169e, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -95,7 +100,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638377184480140690
+  platformSettingsDirtyTick: 638377190666104690
   textureAssetName: 
   singleSpriteImportData:
   - name: 

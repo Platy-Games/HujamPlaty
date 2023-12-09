@@ -236,6 +236,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ship_gif (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 73d4eb4282709d7f19de6aaf265bf979, type: 2}
+    - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5266756382131423231, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+    - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -330,8 +346,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.91, y: 0.78}
-    newSize: {x: 1.91, y: 0.78}
+    oldSize: {x: 1.86, y: 0.78}
+    newSize: {x: 1.86, y: 0.78}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
