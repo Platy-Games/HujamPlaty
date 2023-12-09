@@ -28,7 +28,7 @@ public class bulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var healthCounter = other.transform.GetComponent<HealthCounter>();
+        if (!other.transform.TryGetComponent<HealthCounter>(out HealthCounter healthCounter)) return;
         healthCounter.CurrentHealth -= 50;
         if (healthCounter.CurrentHealth <= 0)
         {
@@ -37,7 +37,7 @@ public class bulletScript : MonoBehaviour
                 var position = other.transform.position;
                 Instantiate(meteorPrefab, new Vector3(position.x + 1, position.y + 1),Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
                 Instantiate(meteorPrefab, new Vector3(position.x - 1, position.y - 1), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
-                
+                        
             }
             Destroy(other.gameObject);
         }
