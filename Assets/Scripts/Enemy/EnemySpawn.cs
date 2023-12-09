@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -50,21 +52,23 @@ public class EnemySpawn : MonoBehaviour
         // Destroy the enemy after a specific lifetime
         Destroy(spawnedEnemy, objectLifetime);
 
-        // Start enemy movement towards the target (player)
-        StartCoroutine(MoveTowardsTarget(spawnedEnemy.transform));
     }
 
-    IEnumerator MoveTowardsTarget(Transform enemyTransform)
+    private void MoveTowardsTarget(Transform enemyTransform)
     {
-        while (enemyTransform != null && target != null)
+        if (enemyTransform != null && target != null)
         {
             // Calculate the direction towards the target (player)
             Vector2 moveDirection = (target.position - enemyTransform.position).normalized;
 
             // Move towards the target
             enemyTransform.Translate(moveDirection * leftwardSpeed * Time.deltaTime);
-
-            yield return null;
+            
         }
+    }
+
+    private void Update()
+    {
+        
     }
 }
