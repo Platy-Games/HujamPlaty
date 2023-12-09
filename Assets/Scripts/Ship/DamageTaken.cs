@@ -4,34 +4,37 @@ using UnityEngine;
 
 public class DamageTaken : MonoBehaviour
 {
+    public delegate void OnDamageTaken(int damageAmount);
+    public static event OnDamageTaken DamageEvent;
+
     [SerializeField] private GameObject BigMeteor;
     [SerializeField] private GameObject Meteor;
     [SerializeField] private GameObject EnemyBullets;
     [SerializeField] private GameObject Enemy;
 
-    private int ShipHealth = 100;
+    public int DamegeAmaunt;
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("BigMeteor"))
         {
-            ShipHealth -= 50;
+            DamageEvent?.Invoke(50);
             Destroy(other.gameObject);
         }
         if (other.CompareTag("Meteor"))
         {
-            ShipHealth -= 15;
+            DamageEvent?.Invoke(15);
             Destroy(other.gameObject);
-            Debug.Log("Ship Healt -15." + ShipHealth);
         }
         if (other.CompareTag("Enemy"))
         {
-            ShipHealth -= 30;
+            DamageEvent?.Invoke(30);
             Destroy(other.gameObject);
         }
         if (other.CompareTag("EnemyBullets"))
         {
-            ShipHealth -= 20;
+            DamageEvent?.Invoke(20);
             Destroy(other.gameObject);
         }
     }
