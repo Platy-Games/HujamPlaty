@@ -157,7 +157,6 @@ MonoBehaviour:
   - {fileID: 2941695037114820452, guid: 0e71b01d50b4578b8b4e56dba76f84fe, type: 3}
   - {fileID: 2941695037114820452, guid: bd8bf975779249698be144b0a1b99140, type: 3}
   spawnSpeed: 3
-  solaDogruHiz: 2
   nesneOmru: 13
 --- !u!61 &514485949
 BoxCollider2D:
@@ -649,7 +648,7 @@ MonoBehaviour:
   - {fileID: 6685627900709232980, guid: a24e3025604e74b93be0de42afea80b9, type: 3}
   - {fileID: 6685627900709232980, guid: a24e3025604e74b93be0de42afea80b9, type: 3}
   spawnSpeed: 2
-  leftwardSpeed: 5
+  leftwardSpeed: 0.3
   objectLifetime: 2
 --- !u!136 &2081680624
 CapsuleCollider:

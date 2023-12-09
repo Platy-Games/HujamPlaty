@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MeteoriteSpawner : MonoBehaviour
 {
     [SerializeField] private  GameObject[] spawnNesneleri; // Spawner tarafından oluşturulacak nesnelerin listesi
-    [SerializeField] private float spawnSpeed = 3f; 
-    [SerializeField] private float solaDogruHiz = 5f; // Nesnelere eklenecek sola doğru hız
+    [SerializeField] private float spawnSpeed = 3f;
+    public static float solaDogruHiz = 5f; // Nesnelere eklenecek sola doğru hız
     [SerializeField] private float nesneOmru = 5f; // Nesnenin ömrü (saniye)
 
     void Start()

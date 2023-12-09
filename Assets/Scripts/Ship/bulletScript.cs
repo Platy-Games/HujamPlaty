@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class bulletScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class bulletScript : MonoBehaviour
     public float speed;
     Vector3 targetPos;
     Vector3 direction;
+    [SerializeField] private GameObject meteorPrefab;
     private void Start()
     {
         Destroy(gameObject,DestroyTime);
@@ -26,14 +28,18 @@ public class bulletScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.transform.CompareTag("BigMeteor"))
+        var healthCounter = other.transform.GetComponent<HealthCounter>();
+        healthCounter.CurrentHealth -= 25;
+        if (healthCounter.CurrentHealth <= 0)
         {
-            var healthCounter = other.transform.GetComponent<HealthCounter>();
-            healthCounter.CurrentHealth -= 25;
-            if (healthCounter.CurrentHealth <= 0)
+            if (other.transform.CompareTag("BigMeteor"))
             {
-                Destroy(other.gameObject);
+                var position = other.transform.position;
+                Instantiate(meteorPrefab, new Vector3(position.x + 1, position.y + 1),Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
+                Instantiate(meteorPrefab, new Vector3(position.x - 1, position.y - 1), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
+                
             }
+            Destroy(other.gameObject);
         }
         Destroy(gameObject);
     }

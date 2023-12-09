@@ -135,3 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyTime: 2
   speed: 15
+  meteorPrefab: {fileID: 2941695037114820452, guid: 0e71b01d50b4578b8b4e56dba76f84fe, type: 3}
