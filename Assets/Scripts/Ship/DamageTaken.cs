@@ -16,23 +16,23 @@ public class DamageTaken : MonoBehaviour
         if (other.CompareTag("BigMeteor"))
         {
             ShipHealth -= 50;
-            Destroy(BigMeteor);
+            Destroy(other.gameObject);
         }
         if (other.CompareTag("Meteor"))
         {
             ShipHealth -= 15;
-            Destroy(Meteor);
+            Destroy(other.gameObject);
             Debug.Log("Ship Healt -15." + ShipHealth);
         }
         if (other.CompareTag("Enemy"))
         {
             ShipHealth -= 30;
-            Destroy(Enemy);
+            Destroy(other.gameObject);
         }
         if (other.CompareTag("EnemyBullets"))
         {
             ShipHealth -= 20;
-            Destroy(EnemyBullets);
+            Destroy(other.gameObject);
         }
     }
 }
