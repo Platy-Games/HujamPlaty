@@ -2,16 +2,38 @@ using UnityEngine;
 
 public class GANCA : MonoBehaviour
 {
-    [SerializeField] private float donmeHizi = 5f;
-
+    [SerializeField] private float donmeHizi = 2.5f;
     [SerializeField] private float maksimumDonmeAci = 180f;
+    [SerializeField] private float hareketHizi = 10f;
+
+    private Vector3 initialPosition;
+    private Vector3 targetPosition;
+
+    void Start()
+    {
+        // Başlangıç pozisyonunu kaydet
+        initialPosition = transform.position;
+        targetPosition = initialPosition; // İlk hedef pozisyonunu başlangıç pozisyonu olarak ayarla
+    }
 
     void Update()
     {
         Vector3 farePozisyonu = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         farePozisyonu.z = 0f;
 
-        transform.position = transform.position;
+        if (Input.GetMouseButtonDown(1)) // Sağ tıklandığında
+        {
+            // Sağ tıklandığında nesnenin rotate olduğu alanda mı kontrol et
+            if (IsInRotateArea(farePozisyonu))
+            {
+                targetPosition = farePozisyonu; // Sağ tıklandığında yeni hedef pozisyonu ayarla
+            }
+        }
+
+        // Sağ tıklanan pozisyona doğru hareket et
+        MoveStraightTowards();
+
+        // Nesne sürekli olarak fareyi takip etsin
         RotateTowards(farePozisyonu);
     }
 
@@ -24,5 +46,25 @@ public class GANCA : MonoBehaviour
 
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, donmeHizi * Time.deltaTime);
+    }
+
+    void MoveStraightTowards()
+    {
+        // Hedef konuma doğru düz bir çizgide ilerle
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, hareketHizi * Time.deltaTime);
+
+        // Eğer hedef konuma ulaşıldıysa, başlangıç pozisyonuna geri dön
+        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+        {
+            targetPosition = initialPosition;
+        }
+    }
+
+    bool IsInRotateArea(Vector3 position)
+    {
+        // Eğer rotate olduğu alanda ise true döndür
+        float angle = Mathf.Atan2(position.y - initialPosition.y, position.x - initialPosition.x) * Mathf.Rad2Deg;
+        float currentAngle = transform.eulerAngles.z;
+        return Mathf.Abs(Mathf.DeltaAngle(angle, currentAngle)) < maksimumDonmeAci / 2f;
     }
 }
