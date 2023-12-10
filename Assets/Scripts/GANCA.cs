@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class GANCA : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class GANCA : MonoBehaviour
     private Vector3 targetPosition;
 
     private bool isMovingTowards = false; // Hareket durumunu kontrol etmek için
-    private UnityEvent _hookedEvent;
+    public static UnityEvent HookedEvent;
 
     void Start()
     {
@@ -86,6 +87,6 @@ public class GANCA : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        _hookedEvent.Invoke();
+        HookedEvent.Invoke();
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 827164160975134549}
   - component: {fileID: -6257097366176607938}
   - component: {fileID: 593602738689526391}
+  - component: {fileID: -3226318533433144141}
   m_Layer: 0
   m_Name: Meteors
   m_TagString: Meteor
@@ -162,3 +163,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 25
+--- !u!114 &-3226318533433144141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941695037114820452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c354d59ff425964a9a20a8f27c9b0248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
