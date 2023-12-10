@@ -48,7 +48,7 @@ namespace Enemy
                 }
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
