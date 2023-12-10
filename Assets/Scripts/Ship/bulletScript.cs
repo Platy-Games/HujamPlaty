@@ -13,6 +13,11 @@ public class bulletScript : MonoBehaviour
     [SerializeField] private GameObject meteorPrefab;
     [SerializeField] private float bulletStrength;
     [SerializeField] private GameObject explosionPrefab;
+
+    private UpgradeManager upgradeManager;
+
+    public int upgradeLevel = 0;
+
     private void Start()
     {
         Destroy(gameObject,DestroyTime);
@@ -22,6 +27,12 @@ public class bulletScript : MonoBehaviour
         targetPos.z = 0f;
 
         direction = (targetPos - transform.position).normalized;
+
+
+        upgradeManager = FindObjectOfType<UpgradeManager>();
+
+        ApplyUpgrades();
+
     }
     private void Update()
     {
@@ -46,5 +57,13 @@ public class bulletScript : MonoBehaviour
             Destroy(other.gameObject);
         }
         Destroy(gameObject);
+    }
+
+    public void ApplyUpgrades()
+    {
+        if (upgradeManager != null)
+        {
+            upgradeManager.ApplyUpgrades(this);
+        }
     }
 }
