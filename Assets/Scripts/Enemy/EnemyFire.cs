@@ -7,8 +7,6 @@ public class EnemyFire : MonoBehaviour
     public GameObject bulletPrefab;
     [SerializeField] private float cooldown;
     private bool _isCooldownOver;
-    private GameObject gameObject1;
-
     private void Start()
     {
         _isCooldownOver = true;
@@ -26,7 +24,7 @@ public class EnemyFire : MonoBehaviour
 
     void CreateABullet()
     {
-        GameObject instance = Instantiate(bulletPrefab, gameObject1.transform.position, Quaternion.identity);
+        GameObject instance = Instantiate(bulletPrefab, gameObject.transform.position, Quaternion.identity);
     }
 
     private IEnumerator SetCooldown()
