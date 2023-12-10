@@ -6,6 +6,9 @@ public class DamageTaken : MonoBehaviour
 {
     private int ShipHealth = 100;
 
+    
+
+
     [SerializeField] private GameObject bigMeteorPrefab;
     [SerializeField] private GameObject meteorPrefab;
     [SerializeField] private GameObject enemyPrefab;
@@ -18,7 +21,7 @@ public class DamageTaken : MonoBehaviour
             ShipHealth -= 25;
             Destroy(collision.gameObject);
             Debug.Log("Ship Health -25 New Health = " + ShipHealth);
-            TakeDamage();
+            TakeDamage(); 
         }
         else if (collision.CompareTag("EnemyBullets"))
         {
@@ -45,84 +48,51 @@ public class DamageTaken : MonoBehaviour
         ShipHealth -= 20;
         Destroy(other.gameObject);
     }*/
-public float immortalTime = 2f; // Ölümsüzlük süresi (saniye)
-    public Color damageColor = Color.red; // Hasar rengi
-    public float shakeDuration = 0.1f; // Titreme süresi (saniye)
-    public float shakeMagnitude = 0.1f; // Titreme şiddeti
-    public float immobilizeTime = 0.5f; // Hareket edememe süresi (saniye)
 
-    private bool isImmortal = false;
-    private Rigidbody2D rb;
+    /////////////////////////////////////////////////////////////// Player Damage Alma Efektleri (renk , sarsılma, hareket edememe)
+    
+    [SerializeField] private float flashDuration = 0.2f; // Yanıp sönme süresi
+    [SerializeField] private Color flashColor = Color.red; // Yanıp sönme rengi
+    private SpriteRenderer spriteRenderer; // Sprite Renderer componenti
+    private Color originalColor; // Orijinal renk
 
-    private void Start()
+    [SerializeField] private float shakeDuration = 0.5f; // Sallanma süresi
+    [SerializeField] private float shakeMagnitude = 0.1f; // Sallanma büyüklüğü
+    private Vector3 originalPosition; // Orijinal pozisyon
+
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>(); // Sprite Renderer componentini al
+        originalColor = spriteRenderer.color; // Orijinal rengi kaydet
+        
     }
 
-    private void Update()
-    {
-        // Ölümsüzlük süresi kontrolü
-        if (isImmortal)
-        {
-            immortalTime -= Time.deltaTime;
-            if (immortalTime <= 0)
-            {
-                isImmortal = false;
-                // Ölümsüzlük süresi bittiğinde rengi geri al
-                GetComponent<SpriteRenderer>().color = Color.white;
-            }
-        }
-    }
-
-    // Hasar alma fonksiyonu
     public void TakeDamage()
     {
-        if (!isImmortal)
-        {
-            // Ölümsüzlük süresini başlat
-            isImmortal = true;
-
-            // Hasar rengini uygula
-            GetComponent<SpriteRenderer>().color = damageColor;
-
-            // Titreme efektini başlat
-            StartCoroutine(Shake());
-
-            // Hareket edememe süresini kontrol et
-            StartCoroutine(Immobilize());
-
-            // Hasar alındığında yapılacak diğer işlemleri buraya ekleyebilirsiniz
-        }
+        StartCoroutine(Flash()); // Yanıp sönme Coroutine'ini başlat
+        StartCoroutine(Shake()); // Sallanma Coroutine'ini başlat
     }
 
-    // Titreme efekti
+     private IEnumerator Flash()
+    {
+        spriteRenderer.color = flashColor; // Rengi yanıp sönme rengine değiştir
+        yield return new WaitForSeconds(flashDuration); // Belirli bir süre bekle
+        spriteRenderer.color = originalColor; // Rengi orijinal rengine geri döndür
+    }
+
     private IEnumerator Shake()
     {
-        Vector2 originalPosition = rb.position;
-
-        float elapsedTime = 0f;
-
-        while (elapsedTime < shakeDuration)
+        originalPosition = transform.position; // Orijinal pozisyonu kaydet
+        float elapsed = 0f; //geçen süre
+        while (elapsed < shakeDuration) //Süre bitene kadar
         {
-            rb.position = originalPosition + Random.insideUnitCircle * shakeMagnitude;
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            Vector3 randomDirection = Random.insideUnitCircle*shakeMagnitude; // Rastgele bir yön belirle
+            transform.position = originalPosition + randomDirection; // Pozisyonu orjinal pozisyona göre değiştir
+            elapsed += Time.deltaTime; 
+            yield return null; //Bir sonraki frame e geç
         }
-
-        rb.position = originalPosition;
+        transform.position = originalPosition; // pozisyonu orjinal pozisyona geri getir
     }
-
-    // Hareket edememe süresi
-    private IEnumerator Immobilize()
-    {
-        rb.velocity = Vector2.zero; // Hareketi durdur
-
-        // Hareket edememe süresince yapılacak işlemleri ekleyebilirsiniz
-
-        yield return new WaitForSeconds(immobilizeTime);
-
-        rb.velocity = Vector2.zero; // Hareketi sıfırla
-
-        // Hareket edememe süresi bittiğinde yapılacak işlemleri ekleyebilirsiniz
-    }
+    
+    
 }
