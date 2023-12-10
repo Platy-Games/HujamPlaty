@@ -93,6 +93,11 @@ MonoBehaviour:
   bigMeteorPrefab: {fileID: 2941695037114820452, guid: bd8bf975779249698be144b0a1b99140, type: 3}
   meteorPrefab: {fileID: 2941695037114820452, guid: 0e71b01d50b4578b8b4e56dba76f84fe, type: 3}
   enemyPrefab: {fileID: 6685627900709232980, guid: a24e3025604e74b93be0de42afea80b9, type: 3}
+  immortalTime: 2
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  shakeDuration: 0.1
+  shakeMagnitude: 0.1
+  immobilizeTime: 0.5
 --- !u!114 &3184917746479039939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ship_gif (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+      propertyPath: m_TagString
+      value: PlayerPrefab
+      objectReference: {fileID: 0}
     - target: {fileID: 1160356261127867848, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
       propertyPath: m_Controller
       value: 
@@ -132,6 +141,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 5266756382131423231, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+    - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
