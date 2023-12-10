@@ -79,7 +79,7 @@ public class GANCA : MonoBehaviour
     {
         // Eğer rotate olduğu alanda ise true döndür
         float angle = Mathf.Atan2(position.y - initialPosition.y, position.x - initialPosition.x) * Mathf.Rad2Deg;
-        float currentAngle = transform.eulerAngles.z;
+        float currentAngle = transform.eulerAngles.y;
         return Mathf.Abs(Mathf.DeltaAngle(angle, currentAngle)) < maksimumDonmeAci / 2f;
     }
 }
