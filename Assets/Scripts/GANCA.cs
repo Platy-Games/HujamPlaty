@@ -12,6 +12,7 @@ public class GANCA : MonoBehaviour
     private Vector3 targetPosition;
 
     private bool isMovingTowards = false; // Hareket durumunu kontrol etmek için
+    private UnityEvent _hookedEvent;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class GANCA : MonoBehaviour
     {
         Vector3 farePozisyonu = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetMouseButtonDown(1)) // Sağ tıklandığında
+        if (Input.GetKey(KeyCode.Space)) // Sağ tıklandığında
         {
             // Sağ tıklandığında nesnenin rotate olduğu alanda mı kontrol et
             if (IsInRotateArea(farePozisyonu))
@@ -81,5 +82,10 @@ public class GANCA : MonoBehaviour
         float angle = Mathf.Atan2(position.y - initialPosition.y, position.x - initialPosition.x) * Mathf.Rad2Deg;
         float currentAngle = transform.eulerAngles.y;
         return Mathf.Abs(Mathf.DeltaAngle(angle, currentAngle)) < maksimumDonmeAci / 2f;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        _hookedEvent.Invoke();
     }
 }
