@@ -9,6 +9,8 @@ public class GANCA : MonoBehaviour
     private Vector3 initialPosition;
     private Vector3 targetPosition;
 
+    private bool isMovingTowards = false; // Hareket durumunu kontrol etmek için
+
     void Start()
     {
         // Başlangıç pozisyonunu kaydet
@@ -27,14 +29,26 @@ public class GANCA : MonoBehaviour
             if (IsInRotateArea(farePozisyonu))
             {
                 targetPosition = farePozisyonu; // Sağ tıklandığında yeni hedef pozisyonu ayarla
+                isMovingTowards = true; // Hareket etme durumunu başlat
             }
         }
 
-        // Sağ tıklanan pozisyona doğru hareket et
-        MoveStraightTowards();
+        if (isMovingTowards)
+        {
+            // Sağ tıklanan pozisyona doğru hareket et
+            MoveStraightTowards();
 
-        // Nesne sürekli olarak fareyi takip etsin
-        RotateTowards(farePozisyonu);
+            // Eğer hedef konuma ulaşıldıysa, başlangıç pozisyonuna geri dön ve mause takibini bırak
+            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+            {
+                isMovingTowards = false; // Hareket etme durumunu kapat
+            }
+        }
+        else
+        {
+            // Nesne sadece hareket etmiyorsa ve sağ tıklanmadıysa, sürekli olarak fareyi takip etsin
+            RotateTowards(farePozisyonu);
+        }
     }
 
     void RotateTowards(Vector3 targetPosition)
