@@ -1,54 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserScript : MonoBehaviour
+namespace Enemy
 {
-    public float DestroyTime;
-    public float speed;
-    Vector3 targetPos;
-    Vector3 direction;
-    private Rigidbody2D rb;
-    private Transform Player;
-    [SerializeField] private GameObject meteorPrefab;
-    private Collider2D thisCollider;
+    public class LaserScript : MonoBehaviour
+    {
+        public float destroyTime;
+        public float speed;
+        private Vector3 _targetPos;
+        private Vector3 _direction;
+        private Rigidbody2D _rb;
+        private Transform _player;
+        [SerializeField] private GameObject meteorPrefab;
+        private Collider2D _thisCollider;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        Destroy(gameObject, DestroyTime);
-        Player = GameObject.FindWithTag("Player").transform;
-        targetPos = Player.transform.position;
-        targetPos.z = 0f;
-        rb = GetComponent<Rigidbody2D>();
-        direction = (targetPos - transform.position).normalized * speed;
-        rb.velocity = new Vector2(direction.x, direction.y);
-        thisCollider = GetComponent<Collider2D>();
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other == thisCollider) return;
-        if (!other.transform.TryGetComponent<HealthCounter>(out HealthCounter healthCounter)) return;
-        healthCounter.CurrentHealth -= 15;
-        if (healthCounter.CurrentHealth <= 0)
+        // Start is called before the first frame update
+        void Start()
         {
-            if (other.transform.CompareTag("BigMeteor"))
-            {
-                var position = other.transform.position;
-                Instantiate(meteorPrefab, new Vector3(position.x + 1, position.y + 1), Quaternion.identity)
-                    .GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
-                Instantiate(meteorPrefab, new Vector3(position.x - 1, position.y - 1), Quaternion.identity)
-                    .GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
-            }
+            Destroy(gameObject, destroyTime);
+            _player = GameObject.FindWithTag("Player").transform;
+            _targetPos = _player.transform.position;
+            _targetPos.z = 0f;
+            _rb = GetComponent<Rigidbody2D>();
+            _direction = (_targetPos - transform.position).normalized * speed;
+            _rb.velocity = new Vector2(_direction.x, _direction.y);
+            _thisCollider = GetComponent<Collider2D>();
         }
 
-        Destroy(gameObject);
+        private void Update()
+        {
+            _rb.velocity = _direction;
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other == _thisCollider) return;
+            if (!other.transform.TryGetComponent(out HealthCounter healthCounter)) return;
+            healthCounter.CurrentHealth -= 15;
+            if (healthCounter.CurrentHealth <= 0)
+            {
+                if (other.transform.CompareTag("BigMeteor"))
+                {
+                    var position = other.transform.position;
+                    Instantiate(meteorPrefab, new Vector3(position.x + 1, position.y + 1), Quaternion.identity)
+                        .GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
+                    Instantiate(meteorPrefab, new Vector3(position.x - 1, position.y - 1), Quaternion.identity)
+                        .GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
+                }
+            }
+
+            Destroy(gameObject);
+        }
     }
 }
