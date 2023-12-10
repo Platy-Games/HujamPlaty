@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTime: 1.11
-  speed: 0.93
+  speed: 2
   meteorPrefab: {fileID: 2532680803445183902}
 --- !u!50 &-4937892124175987931
 Rigidbody2D:

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a8cf030-e4a4-4c72-a260-c16586053780" name="Changes" comment="" />
+    <list default="true" id="1a8cf030-e4a4-4c72-a260-c16586053780" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HujamPlaty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HujamPlaty/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/laser.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/laser.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyFire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyFire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/LaserScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/LaserScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +110,7 @@
       <workItem from="1702062481067" duration="1206000" />
       <workItem from="1702137193166" duration="92000" />
       <workItem from="1702137737902" duration="1232000" />
+      <workItem from="1702217023648" duration="1944000" />
     </task>
     <servers />
   </component>
