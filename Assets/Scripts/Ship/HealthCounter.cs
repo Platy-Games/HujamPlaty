@@ -6,7 +6,7 @@ public class HealthCounter : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     // Start is called before the first frame update
-    public int CurrentHealth { get; set; }
+    public float CurrentHealth { get; set; }
     void Start()
     {
         CurrentHealth = maxHealth;

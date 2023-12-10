@@ -11,6 +11,7 @@ public class bulletScript : MonoBehaviour
     Vector3 targetPos;
     Vector3 direction;
     [SerializeField] private GameObject meteorPrefab;
+    [SerializeField] private float bulletStrength;
     private void Start()
     {
         Destroy(gameObject,DestroyTime);
@@ -28,9 +29,9 @@ public class bulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.transform.TryGetComponent<HealthCounter>(out HealthCounter healthCounter)) return;
-        healthCounter.CurrentHealth -= 15;
-        if (healthCounter.CurrentHealth <= 0)
+        if (!other.transform.TryGetComponent(out HealthCounter healthCounter)) return;
+        healthCounter.CurrentHealth -= bulletStrength;
+        if (healthCounter.CurrentHealth <= 0f)
         {
             if (other.transform.CompareTag("BigMeteor"))
             {
