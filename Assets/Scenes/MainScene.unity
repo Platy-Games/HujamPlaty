@@ -313,6 +313,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
+      propertyPath: spawnSpeed
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
+      propertyPath: objectLifetime
+      value: 11.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 7104970671296650434, guid: 6c59638547d90ce4b9028a76db434ce0, type: 3}
@@ -449,6 +457,10 @@ PrefabInstance:
     - target: {fileID: 7397295367003540862, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_Name
       value: MeteoriteSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397295367003540862, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
