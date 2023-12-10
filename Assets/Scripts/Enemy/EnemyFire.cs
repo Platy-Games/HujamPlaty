@@ -1,34 +1,33 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class EnemyFire : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    private Transform _spawnPos;
     [SerializeField] private float cooldown;
+    private bool _isCooldownOver;
     private void Start()
     {
-        _spawnPos = GetComponent<Transform>();
         _isCooldownOver = true;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _isCooldownOver)
+        if (_isCooldownOver)
         {
             StartCoroutine(SetCooldown());
             CreateABullet();
         }
 
     }
+
     void CreateABullet()
     {
-        GameObject instance = Instantiate(bulletPrefab, _spawnPos.position, Quaternion.identity);
+        var position = transform.position;
+        Instantiate(bulletPrefab, new Vector3(position.x - 1.15f, position.y, position.z), Quaternion.identity);
     }
 
-    private bool _isCooldownOver;
     private IEnumerator SetCooldown()
     {
         _isCooldownOver = false;

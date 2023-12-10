@@ -39,8 +39,6 @@ public class EnemySpawn : MonoBehaviour
         // Apply leftward velocity to the enemy if Rigidbody2D exists
         if (rb != null)
         {
-            rb.velocity = new Vector2(-leftwardSpeed, 0f);
-
             // Disable gravity for the enemy
             rb.gravityScale = 0f;
         }

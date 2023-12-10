@@ -8,6 +8,8 @@ TagManager:
   - Meteor
   - BigMeteor
   - Enemy
+  - EnemyBullets
+  - EnemyBullot
   layers:
   - Default
   - TransparentFX
