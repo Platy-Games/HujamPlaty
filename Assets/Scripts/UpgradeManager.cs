@@ -7,7 +7,7 @@ public class UpgradeManager : MonoBehaviour
     public float damageupgrade;
     public float speedupgrade;
     public int healthupgrade;
-
+    public int Shield;
 
     public void ApplyUpgrades(bulletScript bulletScript)
     {
@@ -22,5 +22,10 @@ public class UpgradeManager : MonoBehaviour
     public void ApplyUpgrades2(PlayerAttack playerattack)
     {
         playerattack.CreateABullet();
+    }
+    
+    public void ApplyUpgrades3(Shield shield)
+    {
+        shield.maxHealth += Shield;
     }
 }
