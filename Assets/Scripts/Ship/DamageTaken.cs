@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DamageTaken : MonoBehaviour
 {
-    private int ShipHealth = 100;
+    private int ShipHealth = 200;
     public static string LevelName;
     public static int enemyKilled = 0;
 
@@ -57,7 +57,7 @@ public class DamageTaken : MonoBehaviour
             Debug.Log(LevelName);
             DontDestroyOnLoad(gameObject);
             SceneManager.LoadScene("GameOverScene");
-            ShipHealth = 100;
+            ShipHealth = 200;
         }
     }
 
