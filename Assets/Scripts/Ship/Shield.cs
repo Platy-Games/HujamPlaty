@@ -16,6 +16,7 @@ public class Shield : MonoBehaviour
     public int upgradeLevel = 0;
 
     public int ShieldHealth = 50; // Kalkanın maksimum canı
+    public int maxHealth = 50; // Kalkanın maksimum canı
     public float rechargeTime = 5f; // Kalkanın yenilenme süresi
     public int currentHealth; // Kalkanın mevcut canı
     private SpriteRenderer spriteRenderer; // Kalkanın Sprite Renderer componenti
@@ -38,6 +39,7 @@ public class Shield : MonoBehaviour
         ApplyUpgrades3();
     }
 
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {

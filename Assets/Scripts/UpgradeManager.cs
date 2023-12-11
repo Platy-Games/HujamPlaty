@@ -26,7 +26,6 @@ public class UpgradeManager : MonoBehaviour
     
     public void ApplyUpgrades3(Shield shield)
     {
-        shield.ShieldHealth += Shield;
-        shield.currentHealth += Shield;
+        shield.maxHealth += Shield;
     }
 }
