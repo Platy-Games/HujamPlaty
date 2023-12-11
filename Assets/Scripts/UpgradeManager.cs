@@ -8,6 +8,7 @@ public class UpgradeManager : MonoBehaviour
     public float speedupgrade;
     public int healthupgrade;
     public int Shield;
+    bulletScript bulletScript;
 
     public void ApplyUpgrades(bulletScript bulletScript)
     {

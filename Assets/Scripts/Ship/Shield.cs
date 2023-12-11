@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    
-
     [SerializeField] private GameObject bigMeteorPrefab;
     [SerializeField] private GameObject meteorPrefab;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject EnemyBulletsPrefab;
+    [SerializeField] private GameObject EnemyBullets2Prefab;
 
     private UpgradeManager upgradeManager;
 
@@ -20,13 +19,13 @@ public class Shield : MonoBehaviour
     public float rechargeTime = 5f; // Kalkanın yenilenme süresi
     public int currentHealth; // Kalkanın mevcut canı
     private SpriteRenderer spriteRenderer; // Kalkanın Sprite Renderer componenti
-    private CapsuleCollider2D capsuleCollider2D;
+    private PolygonCollider2D capsuleCollider2D;
     private bool isBroken; // Kalkanın kırık olma durumu
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); // Sprite Renderer componentini al
-        capsuleCollider2D = GetComponent<CapsuleCollider2D>();
+        capsuleCollider2D = GetComponent<PolygonCollider2D>();
         currentHealth = ShieldHealth; // Mevcut canı maksimum cana eşitle
         isBroken = false; // Kırık olma durumunu false yap
     }
@@ -39,7 +38,7 @@ public class Shield : MonoBehaviour
         ApplyUpgrades3();
     }
 
-    }
+    
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -66,6 +65,13 @@ public class Shield : MonoBehaviour
         else if (collision.CompareTag("Enemy"))
         {
             currentHealth -= 50; // Mevcut canı azalt
+            Destroy(collision.gameObject);
+            Debug.Log("Shield Health -30 New Health = " + currentHealth);
+            ShieldDamage();
+        }
+        else if (collision.CompareTag("BossBullet"))
+        {
+            currentHealth -= 20; // Mevcut canı azalt
             Destroy(collision.gameObject);
             Debug.Log("Shield Health -30 New Health = " + currentHealth);
             ShieldDamage();
@@ -108,3 +114,9 @@ public class Shield : MonoBehaviour
     }
 
 }
+    
+
+    
+
+
+

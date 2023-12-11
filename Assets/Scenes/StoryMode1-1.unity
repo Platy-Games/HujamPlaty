@@ -548,6 +548,14 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 5847332204357699889, guid: a24e3025604e74b93be0de42afea80b9, type: 3}
+    - target: {fileID: 3656139829797082350, guid: d6ebfbe41e2b0a396b99016e01f86496, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 7104970671296650434, guid: 550aed25b9bd54142a4c8b93112a2fc0, type: 3}
+    - target: {fileID: 4561287566579121120, guid: d6ebfbe41e2b0a396b99016e01f86496, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5004156895298546109, guid: d6ebfbe41e2b0a396b99016e01f86496, type: 3}
       propertyPath: EnemyBulletsPrefab
       value: 

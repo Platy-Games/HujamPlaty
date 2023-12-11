@@ -11,7 +11,7 @@ public class bulletScript : MonoBehaviour
     Vector3 targetPos;
     Vector3 direction;
     [SerializeField] private GameObject meteorPrefab;
-    [SerializeField] private float bulletStrength;
+    public float bulletStrength;
     [SerializeField] private GameObject explosionPrefab;
 
     private UpgradeManager upgradeManager;
