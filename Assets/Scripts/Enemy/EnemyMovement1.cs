@@ -32,11 +32,19 @@ public class EnemyMovement1 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (!other.gameObject.CompareTag("Player"))
+        if (!other.gameObject.CompareTag("Player") &&
+        !other.gameObject.CompareTag("Enemy") &&
+        !other.gameObject.CompareTag("Enemy") &&
+        !other.gameObject.CompareTag("Enemy"))
         {
-            //TODO animation explosion
+            // TODO: Animation explosion
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            //Destroy(gameObject);
+        }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            // Ignore collision with objects tagged as "Enemy"
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other.collider, true);
         }
     }
 }
