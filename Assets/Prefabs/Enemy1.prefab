@@ -23,7 +23,7 @@ PrefabInstance:
     - target: {fileID: 1160356261127867848, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 2631555988911529129, guid: 855092d01ec30465187de3223273ec52, type: 3}
+      objectReference: {fileID: -1629768304023786166, guid: aa26d0ea5d47948abbffe717d2bf8990, type: 3}
     - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 3626916397498700004, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5711467270590661221, guid: 855092d01ec30465187de3223273ec52, type: 3}
+      objectReference: {fileID: 8312114013933501044, guid: aa26d0ea5d47948abbffe717d2bf8990, type: 3}
     - target: {fileID: 7878350319992209165, guid: cd06c958b3a783044a8479dbc636610f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -127,8 +127,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.99, y: 0.67}
-  m_Direction: 1
+  m_Size: {x: 1.25, y: 0.55}
+  m_Direction: 0
 --- !u!50 &5578810540978626387
 Rigidbody2D:
   serializedVersion: 4
