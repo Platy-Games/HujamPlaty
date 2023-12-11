@@ -10,6 +10,9 @@ TagManager:
   - Enemy
   - EnemyBullets
   - EnemyBullot
+  - optionsPanel
+  - title
+  - optionspanel
   layers:
   - Default
   - TransparentFX
