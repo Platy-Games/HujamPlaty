@@ -7,6 +7,17 @@ public class ShipMovement : MonoBehaviour
     public float speed = 5.0f; // Speed of ship movement
     public float maxY = 10.0f; // Maximum Y position
     public float minY = -10.0f; // Minimum Y position
+    public float tiltAmount = 5f; // Eğilme miktarı
+    public float tiltSmoothness = 5f; // Eğilme yumuşaklığı
+
+    private float currentTilt = 0f;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        // Rigidbody2D bileşenini al
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -30,5 +41,24 @@ public class ShipMovement : MonoBehaviour
 
         // Set the ship's position, restricting movement along the Y-axis
         transform.position = new Vector2(transform.position.x, newY);
+
+        // Eğilme efekti
+        if (verticalInput > 0)
+        {
+            // Yukarı hareket ederken biraz yukarı eğil
+            currentTilt = Mathf.Lerp(currentTilt, tiltAmount, tiltSmoothness * Time.deltaTime);
+        }
+        else if (verticalInput < 0)
+        {
+            // Aşağı inerken biraz aşağı eğil
+            currentTilt = Mathf.Lerp(currentTilt, -tiltAmount, tiltSmoothness * Time.deltaTime);
+        }
+        else
+        {
+            // Dikey hareket yoksa düzelt
+            currentTilt = Mathf.Lerp(currentTilt, 0f, tiltSmoothness * Time.deltaTime);
+        }
+
+        transform.eulerAngles = new Vector3(0f, 0f, currentTilt);
     }
 }
