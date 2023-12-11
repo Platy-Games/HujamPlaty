@@ -29,7 +29,7 @@ public class HookBehaviour : MonoBehaviour
         Vector3 mouseWorldPos = default;
         if (!Input.GetKey(KeyCode.Space))
         {
-            LookAtMouse();
+            //LookAtMouse();
             return;
         }
 
@@ -37,7 +37,7 @@ public class HookBehaviour : MonoBehaviour
 
         return;
 
-        void LookAtMouse()
+        /*void LookAtMouse()
         {
             var position = transform.position;
             _ropeSprite.size = new Vector2(Vector2.Distance(GANCA.initialPosition, position), _ropeSprite.size.y);
@@ -47,7 +47,7 @@ public class HookBehaviour : MonoBehaviour
             angle = Mathf.Clamp(angle, -360, 360);
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-        }
+        }*/
 
         bool IsInRotateArea()
         {
@@ -83,7 +83,7 @@ public class HookBehaviour : MonoBehaviour
         {
             while (!IsInRotateArea())
             {
-                LookAtMouse();
+                //LookAtMouse();
                 yield return null;
             }
 
