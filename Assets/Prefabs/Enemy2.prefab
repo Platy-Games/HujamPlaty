@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e3f7c95f4266fb0eb42e870edfb61c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 60
 --- !u!114 &8003336487260475834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2532680803445183902, guid: 167f4b17471574192b2a790422ac0609, type: 3}
-  cooldown: 1
+  cooldown: 1.5
 --- !u!114 &8393778922191432243
 MonoBehaviour:
   m_ObjectHideFlags: 0

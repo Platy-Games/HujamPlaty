@@ -161,6 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eeb28b9f444d4e77b5473d803f3d3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 5
+  destroyTime: 1
   speed: 15
   meteorPrefab: {fileID: 2532680803445183902}

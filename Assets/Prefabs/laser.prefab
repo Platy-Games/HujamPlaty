@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639b9b06d73894374879257d4e589463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 1.47
+  destroyTime: 1
   speed: 15
   meteorPrefab: {fileID: 2532680803445183902}
 --- !u!50 &-4937892124175987931

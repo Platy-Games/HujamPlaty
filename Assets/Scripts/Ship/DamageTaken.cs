@@ -6,13 +6,14 @@ public class DamageTaken : MonoBehaviour
 {
     private int ShipHealth = 100;
 
-    
+
 
 
     [SerializeField] private GameObject bigMeteorPrefab;
     [SerializeField] private GameObject meteorPrefab;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject EnemyBulletsPrefab;
+    [SerializeField] private GameObject EnemyBulletsPrefabStraight;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -42,12 +43,14 @@ public class DamageTaken : MonoBehaviour
             Debug.Log("Ship Health -30 New Health = " + ShipHealth);
             TakeDamage();
         }
+        else if (collision.CompareTag("EnemyBullets"))
+        {
+            ShipHealth -= 20;
+            Destroy(collision.gameObject);
+            Debug.Log("Ship Health -20 New Health = " + ShipHealth);
+            TakeDamage();
+        }
     }
-    /*if (other.CompareTag("EnemyBullets"))
-    {
-        ShipHealth -= 20;
-        Destroy(other.gameObject);
-    }*/
 
     /////////////////////////////////////////////////////////////// Player Damage Alma Efektleri (renk , sarsılma, hareket edememe)
     

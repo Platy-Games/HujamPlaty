@@ -23,7 +23,7 @@ public class EnemyMovement3 : MonoBehaviour
     {
         if (_target == null) return;
 
-        if (Mathf.Abs(_target.position.x - transform.position.x) <= 4)
+        if (Mathf.Abs(_target.position.x - transform.position.x) <= 7)
         {
             MoveBetweenPoints();
         }

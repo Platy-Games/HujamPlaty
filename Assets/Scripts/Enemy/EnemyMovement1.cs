@@ -39,7 +39,7 @@ public class EnemyMovement1 : MonoBehaviour
         {
             // TODO: Animation explosion
             Destroy(other.gameObject);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
