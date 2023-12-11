@@ -199,5 +199,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccbf9971b9784c4793afb1f8222252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 2532680803445183902, guid: b79f44bb843314172ade1687fc57cfc9, type: 3}
+  bulletPrefab: {fileID: 2532680803445183902, guid: 167f4b17471574192b2a790422ac0609, type: 3}
   cooldown: 1
