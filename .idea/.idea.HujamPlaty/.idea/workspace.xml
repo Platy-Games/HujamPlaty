@@ -6,11 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="1a8cf030-e4a4-4c72-a260-c16586053780" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HujamPlaty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HujamPlaty/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/BOSS.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/BOSS.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StoryMode1-4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StoryMode1-4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BOSS/BOSSWeapon1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BOSS/BOSSWeapon1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BOSS/BOSSWeapon2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BOSS/BOSSWeapon2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BOSS/BOSScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BOSS/BOSScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/bulletScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/bulletScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/bossbullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/bossbullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship_1-2.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship_1-2.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship_1.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship_1.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship_2.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship_2.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship_3.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_ship_3.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mothership.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mothership.aseprite.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,26 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.environmentSetup",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.environmentSetup&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/xenonfandangon/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/home/xenonfandangon/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/home/xenonfandangon/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/xenonfandangon/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/home/xenonfandangon/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/home/xenonfandangon/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/build1win/build1/HujamPlaty.exe" />
@@ -112,6 +127,7 @@
       <workItem from="1702137737902" duration="1232000" />
       <workItem from="1702217023648" duration="3915000" />
       <workItem from="1702285131513" duration="2369000" />
+      <workItem from="1702292109213" duration="1594000" />
     </task>
     <servers />
   </component>

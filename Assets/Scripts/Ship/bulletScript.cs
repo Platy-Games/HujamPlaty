@@ -30,6 +30,7 @@ public class bulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Collided");
         if (!other.transform.TryGetComponent(out HealthCounter healthCounter)) return;
         healthCounter.CurrentHealth -= bulletStrength;
         if (healthCounter.CurrentHealth <= 0f)

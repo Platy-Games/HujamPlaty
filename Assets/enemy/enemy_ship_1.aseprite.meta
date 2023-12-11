@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 317fd5eb82bf34a999882ce707e1d6d2
+guid: aa26d0ea5d47948abbffe717d2bf8990
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638378681261325640
+  platformSettingsDirtyTick: 638378995461620170
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,87 +119,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: mothership_Frame_0
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 82
-      width: 259
-      height: 68
-    spriteID: eec7ded34e25c47cc87db876ec855a5e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 82}
-  - name: mothership_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 312
-      width: 254
-      height: 68
-    spriteID: e070edc343ef24c2bb847b995f2346a0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 312}
-  - name: mothership_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 263
-      y: 235
-      width: 244
-      height: 69
-    spriteID: 001bcf1092b6d4f1c8cbb31e255f7f3c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 263, y: 235}
-  - name: mothership_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 235
-      width: 251
-      height: 69
-    spriteID: 4db1e058e0729475a8f51bb7c1fda923
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 235}
-  - name: mothership_Frame_4
+  - name: enemy_ship_1_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -208,9 +128,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 256
-      height: 70
-    spriteID: 92b3883a76e0b4e4fba52667510a58ef
+      width: 125
+      height: 55
+    spriteID: 765c006c4aa444247b6a5b38586fbdd6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -219,7 +139,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: mothership_Frame_5
+  - name: enemy_ship_1_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -227,10 +147,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 158
-      width: 254
-      height: 69
-    spriteID: 3bf68846e61bd407781bca0f4279cb4f
+      y: 67
+      width: 125
+      height: 55
+    spriteID: d65fdd4459de34cf38fd8e45de3dd3f2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -238,64 +158,144 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 158}
+    uvTransform: {x: 4, y: 67}
+  - name: enemy_ship_1_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 193
+      width: 123
+      height: 55
+    spriteID: e3432195859f64f00a27baf11c3c5fdf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 193}
+  - name: enemy_ship_1_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 319
+      width: 120
+      height: 55
+    spriteID: 0cc4bf3bb291c44b4b7c7a7c8c9d99eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 319}
+  - name: enemy_ship_1_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 130
+      width: 125
+      height: 55
+    spriteID: 0fe7222b6ff4b40089188c5118e31291
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 130}
+  - name: enemy_ship_1_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 256
+      width: 122
+      height: 55
+    spriteID: c9846b283e8fd4712b6c6a2cfc244665
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 256}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 327344655
-    name: mothership
+    guid: 491645909
+    name: enemy_ship_1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: mothership_Frame_0
+    - name: enemy_ship_1_Frame_0
       frameIndex: 0
       cellRect:
-        x: 28
-        y: 54
-        width: 259
-        height: 68
-      spriteId: eec7ded34e25c47cc87db876ec855a5e
-    - name: mothership_Frame_1
+        x: 38
+        y: 62
+        width: 125
+        height: 55
+      spriteId: 765c006c4aa444247b6a5b38586fbdd6
+    - name: enemy_ship_1_Frame_1
       frameIndex: 1
       cellRect:
-        x: 33
-        y: 54
-        width: 254
-        height: 68
-      spriteId: e070edc343ef24c2bb847b995f2346a0
-    - name: mothership_Frame_2
+        x: 38
+        y: 62
+        width: 125
+        height: 55
+      spriteId: d65fdd4459de34cf38fd8e45de3dd3f2
+    - name: enemy_ship_1_Frame_2
       frameIndex: 2
       cellRect:
-        x: 43
-        y: 53
-        width: 244
-        height: 69
-      spriteId: 001bcf1092b6d4f1c8cbb31e255f7f3c
-    - name: mothership_Frame_3
+        x: 40
+        y: 62
+        width: 123
+        height: 55
+      spriteId: e3432195859f64f00a27baf11c3c5fdf
+    - name: enemy_ship_1_Frame_3
       frameIndex: 3
       cellRect:
-        x: 36
-        y: 53
-        width: 251
-        height: 69
-      spriteId: 4db1e058e0729475a8f51bb7c1fda923
-    - name: mothership_Frame_4
+        x: 43
+        y: 62
+        width: 120
+        height: 55
+      spriteId: 0cc4bf3bb291c44b4b7c7a7c8c9d99eb
+    - name: enemy_ship_1_Frame_4
       frameIndex: 4
       cellRect:
-        x: 31
-        y: 52
-        width: 256
-        height: 70
-      spriteId: 92b3883a76e0b4e4fba52667510a58ef
-    - name: mothership_Frame_5
+        x: 38
+        y: 62
+        width: 125
+        height: 55
+      spriteId: 0fe7222b6ff4b40089188c5118e31291
+    - name: enemy_ship_1_Frame_5
       frameIndex: 5
       cellRect:
-        x: 33
-        y: 53
-        width: 254
-        height: 69
-      spriteId: 3bf68846e61bd407781bca0f4279cb4f
+        x: 41
+        y: 62
+        width: 122
+        height: 55
+      spriteId: c9846b283e8fd4712b6c6a2cfc244665
     linkedCells: []
     parentIndex: -1
   platformSettings:

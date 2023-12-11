@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -99,4 +100,8 @@ public class BOSScript : MonoBehaviour
     }
     #endif
 
+    private void OnCollisionEnter(Collision other)
+    {
+        
+    }
 }

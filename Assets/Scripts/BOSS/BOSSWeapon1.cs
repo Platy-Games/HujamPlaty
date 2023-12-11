@@ -21,7 +21,7 @@ public class BOSSWeapon1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        newPoison = new Vector2(BOSShip.transform.position.x - 2, BOSShip.transform.position.y+1.5f);
+        newPoison = new Vector2(BOSShip.transform.position.x - 5f, BOSShip.transform.position.y+3.5f);
         this.transform.position = newPoison;
         
         if (_isCooldownOver)
