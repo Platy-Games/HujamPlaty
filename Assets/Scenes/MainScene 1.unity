@@ -388,7 +388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4184759664205330957, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5311333722380120750, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: m_LocalPosition.x
@@ -429,6 +429,18 @@ PrefabInstance:
     - target: {fileID: 5311333722380120750, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
+      propertyPath: spawnSpeed
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
+      propertyPath: leftwardSpeed
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
+      propertyPath: objectLifetime
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
@@ -578,16 +590,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2902695527691387072, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
+      propertyPath: nesneOmru
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902695527691387072, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: spawnSpeed
-      value: 1.2
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 3601505917430424920, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.52
+      value: -12.86
       objectReference: {fileID: 0}
     - target: {fileID: 3601505917430424920, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3601505917430424920, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -627,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397295367003540862, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
