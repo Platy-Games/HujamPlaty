@@ -8,10 +8,19 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bulletPrefab;
     private Transform _spawnPos;
     [SerializeField] private float cooldown;
+
+    private UpgradeManager upgradeManager;
+
+    public int upgradeLevel = 0;
+
     private void Start()
     {
         _spawnPos = GetComponent<Transform>();
         _isCooldownOver = true;
+        
+        upgradeManager = FindObjectOfType<UpgradeManager>();
+
+        
     }
 
     private void Update()
@@ -20,10 +29,11 @@ public class PlayerAttack : MonoBehaviour
         {
             StartCoroutine(SetCooldown());
             CreateABullet();
+            ApplyUpgrades2();
         }
 
     }
-    void CreateABullet()
+    public void CreateABullet()
     {
         GameObject instance = Instantiate(bulletPrefab, _spawnPos.position, Quaternion.identity);
     }
@@ -34,5 +44,14 @@ public class PlayerAttack : MonoBehaviour
         _isCooldownOver = false;
         yield return new WaitForSeconds(cooldown);
         _isCooldownOver = true;
+    }
+
+    public void ApplyUpgrades2()
+    {
+        if (upgradeManager != null)
+        {
+            upgradeManager.ApplyUpgrades2(this);
+            Debug.Log("2.projectile spawn");
+        }
     }
 }
