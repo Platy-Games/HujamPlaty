@@ -11,6 +11,10 @@ public class Shield : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject EnemyBulletsPrefab;
 
+    private UpgradeManager upgradeManager;
+
+    public int upgradeLevel = 0;
+
     public int maxHealth = 50; // Kalkanın maksimum canı
     public float rechargeTime = 5f; // Kalkanın yenilenme süresi
     private int currentHealth; // Kalkanın mevcut canı
@@ -26,9 +30,16 @@ public class Shield : MonoBehaviour
         isBroken = false; // Kırık olma durumunu false yap
     }
     
+    void Start()
+    {
+         upgradeManager = FindObjectOfType<UpgradeManager>();
 
+    }
 
-   
+   void Continue()
+   {
+    ApplyUpgrades3();
+   }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -86,6 +97,14 @@ public class Shield : MonoBehaviour
         spriteRenderer.enabled = true; // Sprite Renderer'ı aktif yap
         capsuleCollider2D.enabled = true;
         isBroken = false; // Kırık olma durumunu false yap
+    }
+
+    public void ApplyUpgrades3()
+    {
+        if (upgradeManager != null)
+        {
+            upgradeManager.ApplyUpgrades3(this);
+        }
     }
 
 }
