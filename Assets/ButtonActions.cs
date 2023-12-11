@@ -11,4 +11,10 @@ public class ButtonActions : MonoBehaviour
         SceneManager.MoveGameObjectToScene(GameObject.FindWithTag("Player"), SceneManager.GetActiveScene());
         SceneManager.LoadScene(levelToLoad);
     }
+
+    public void OnMainMenuButtonClicked()
+    {
+        SceneManager.MoveGameObjectToScene(GameObject.FindWithTag("Player"), SceneManager.GetActiveScene());
+        SceneManager.LoadScene("MainMenu");
+    }
 }
