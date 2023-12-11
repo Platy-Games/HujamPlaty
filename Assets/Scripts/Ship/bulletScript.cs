@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.SceneManagement;
 
 public class bulletScript : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class bulletScript : MonoBehaviour
     [SerializeField] private GameObject explosionPrefab;
     private void Start()
     {
-        Destroy(gameObject,DestroyTime);
+       Destroy(gameObject,DestroyTime);
 
 
         targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -45,6 +46,11 @@ public class bulletScript : MonoBehaviour
 
             Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
+            if (++DamageTaken.enemyKilled >= 25)
+            {
+                DamageTaken.enemyKilled = 0;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
         Destroy(gameObject);
     }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
 
 public class MainMenu : MonoBehaviour
 {
@@ -66,11 +65,11 @@ public class MainMenu : MonoBehaviour
         }
         if (gelenButon==8) 
         {
-                SceneManager.LoadSceneAsync("SampleScene"); 
+                SceneManager.LoadSceneAsync(2);
         }
         else if (gelenButon == 9)
         {
-            //SceneManager.LoadSceneAsync("EndlessScane"); daha yapýlmadý
+            SceneManager.LoadSceneAsync(1);
         }
         else if (gelenButon == 10)
         {

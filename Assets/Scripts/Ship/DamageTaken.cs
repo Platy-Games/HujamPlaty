@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamageTaken : MonoBehaviour
 {
     private int ShipHealth = 100;
-
-
-
+    public static string LevelName;
+    public static int enemyKilled = 0;
 
     [SerializeField] private GameObject bigMeteorPrefab;
     [SerializeField] private GameObject meteorPrefab;
@@ -49,6 +49,15 @@ public class DamageTaken : MonoBehaviour
             Destroy(collision.gameObject);
             Debug.Log("Ship Health -20 New Health = " + ShipHealth);
             TakeDamage();
+        }
+
+        if (ShipHealth <= 0)
+        {
+            LevelName = SceneManager.GetActiveScene().name;
+            Debug.Log(LevelName);
+            DontDestroyOnLoad(gameObject);
+            SceneManager.LoadScene("GameOverScene");
+            ShipHealth = 100;
         }
     }
 
