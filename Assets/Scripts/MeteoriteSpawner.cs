@@ -7,7 +7,7 @@ public class MeteoriteSpawner : MonoBehaviour
     [SerializeField] private  GameObject[] spawnNesneleri; // Spawner tarafından oluşturulacak nesnelerin listesi
     [SerializeField] private float minSpawnHizi = 1f; // Minimum nesne oluşturma hızı (saniyede bir)
     [SerializeField] private float maxSpawnHizi = 5f; // Maximum nesne oluşturma hızı (saniyede bir)
-    [SerializeField] private float solaDogruHiz = 5f; // Nesnelere eklenecek sola doğru hız
+    public static float solaDogruHiz = 5f; // Nesnelere eklenecek sola doğru hız
     [SerializeField] private float nesneOmru = 5f; // Nesnenin ömrü (saniye)
 
     void Start()
