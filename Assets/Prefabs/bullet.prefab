@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTime: 2
-  speed: 15
+  speed: 5
   meteorPrefab: {fileID: 2941695037114820452, guid: 0e71b01d50b4578b8b4e56dba76f84fe, type: 3}
   bulletStrength: 1
   upgradeLevel: 0
@@ -151,5 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a88198c2113354caf6ab1954625db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageupgrade: 15
-  speedupgrade: 100
+  damageupgrade: 0
+  speedupgrade: 0
+  healthupgrade: 0

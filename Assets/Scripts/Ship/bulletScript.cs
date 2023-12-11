@@ -42,6 +42,7 @@ public class bulletScript : MonoBehaviour
     {
         if (!other.transform.TryGetComponent(out HealthCounter healthCounter)) return;
         healthCounter.CurrentHealth -= bulletStrength;
+        Debug.Log(healthCounter.CurrentHealth);
         if (healthCounter.CurrentHealth <= 0f)
         {
             if (other.transform.CompareTag("BigMeteor"))
