@@ -67,6 +67,7 @@ public class EnemyMovement3 : MonoBehaviour
         }
 
     }
+    [SerializeField] private GameObject explosionPrefab;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -75,7 +76,7 @@ public class EnemyMovement3 : MonoBehaviour
         !other.gameObject.CompareTag("Enemy") &&
         !other.gameObject.CompareTag("Enemy"))
         {
-            // TODO: Animation explosion
+            Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

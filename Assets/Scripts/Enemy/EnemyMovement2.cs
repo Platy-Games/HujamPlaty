@@ -12,6 +12,7 @@ public class EnemyMovement2 : MonoBehaviour
 
     private Vector3 startPosition;
     [SerializeField] private float leftwardSpeed = 5f;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -33,6 +34,7 @@ public class EnemyMovement2 : MonoBehaviour
         transform.Translate(isStopped ? new Vector2(0, moveDirection.y) : moveDirection * leftwardSpeed * Time.deltaTime);
         
     }
+    [SerializeField] private GameObject explosionPrefab;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (!other.gameObject.CompareTag("Player") &&
@@ -40,7 +42,7 @@ public class EnemyMovement2 : MonoBehaviour
         !other.gameObject.CompareTag("Enemy") &&
         !other.gameObject.CompareTag("Enemy"))
         {
-            // TODO: Animation explosion
+            Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

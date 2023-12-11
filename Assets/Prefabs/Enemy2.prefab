@@ -177,6 +177,7 @@ MonoBehaviour:
   amplitude: 1
   speed: 2
   leftwardSpeed: 5
+  explosionPrefab: {fileID: 5072388156805028519, guid: 27ae00f81b35251a99b62c6b5a9acc89, type: 3}
 --- !u!114 &2495416652260283897
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -208,6 +208,7 @@ MonoBehaviour:
   upwardPoint: 4
   downwardPoint: -4
   patrolSpeed: 3
+  explosionPrefab: {fileID: 5072388156805028519, guid: 27ae00f81b35251a99b62c6b5a9acc89, type: 3}
 --- !u!114 &2406271230006658825
 MonoBehaviour:
   m_ObjectHideFlags: 0
