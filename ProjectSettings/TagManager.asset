@@ -12,6 +12,7 @@ TagManager:
   - EnemyBullot
   - PlayerPrefab
   - BOSShip
+  - Shield
   layers:
   - Default
   - TransparentFX
