@@ -5,23 +5,14 @@ using UnityEngine;
 
 public class MeteorBehaviour : MonoBehaviour
 {
-    private GameObject ganca;
+    private GameObject _ganca;
 
     private void Start()
     {
         // 1. Ganka Objesini Bul
-        ganca = GameObject.Find("Hook");
+        _ganca = GameObject.Find("Hook");
 
         // 2. Ganka Var mı Kontrol Et
-        if (ganca != null)
-        {
-            // 3. Ganka Bulunamazsa Hata Ver
-            GANCA.HookedEvent.AddListener(Hooked);
-        }
-        else
-        {
-            Debug.LogError("GANCA objesi bulunamadı.");
-        }
 
         // 4. İlk Durumu Ayarla
         _isHooked = false;
@@ -32,7 +23,7 @@ public class MeteorBehaviour : MonoBehaviour
         if (_isHooked)
         {
             // Ganka'ya doğru hareket et
-            transform.position = Vector3.MoveTowards(transform.position, ganca.transform.position, 0.03f);
+            transform.Translate(Vector3.zero, _ganca.transform);
         }
     }
 

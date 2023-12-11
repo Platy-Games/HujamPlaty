@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -9,14 +10,14 @@ public class GANCA : MonoBehaviour
     [SerializeField] private float maksimumDonmeAci = 180f;
     [SerializeField] private float hareketHizi = 10f;
 
-    private Vector3 initialPosition;
+    public static Vector3 initialPosition;
     private Vector3 targetPosition;
 
     private bool isMovingTowards = false; // Hareket durumunu kontrol etmek için
-    public static UnityEvent HookedEvent;
-
+    [SerializeField] private float cooldown;
     void Start()
     {
+        isCooldownOver = true;
         // Başlangıç pozisyonunu kaydet
         initialPosition = transform.position;
         targetPosition = initialPosition; // İlk hedef pozisyonunu başlangıç pozisyonu olarak ayarla
@@ -26,7 +27,7 @@ public class GANCA : MonoBehaviour
     {
         Vector3 farePozisyonu = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetKey(KeyCode.Space)) // Sağ tıklandığında
+        if (Input.GetKey(KeyCode.Space) && (Vector2.Distance(transform.position, initialPosition) <= 0f)) // Sağ tıklandığında
         {
             // Sağ tıklandığında nesnenin rotate olduğu alanda mı kontrol et
             if (IsInRotateArea(farePozisyonu))
@@ -52,6 +53,15 @@ public class GANCA : MonoBehaviour
             // Nesne sadece hareket etmiyorsa ve sağ tıklanmadıysa, sürekli olarak fareyi takip etsin
             RotateTowards(farePozisyonu);
         }
+    }
+
+    private bool isCooldownOver;
+
+    private IEnumerator setCooldown()
+    {
+        isCooldownOver = false;
+        yield return new WaitForSeconds(cooldown);
+        isCooldownOver = true;
     }
 
     void RotateTowards(Vector3 targetPosition)
@@ -87,6 +97,5 @@ public class GANCA : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        HookedEvent.Invoke();
     }
 }
