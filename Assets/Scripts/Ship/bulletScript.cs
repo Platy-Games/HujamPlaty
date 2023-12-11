@@ -12,6 +12,7 @@ public class bulletScript : MonoBehaviour
     Vector3 direction;
     [SerializeField] private GameObject meteorPrefab;
     [SerializeField] private float bulletStrength;
+    [SerializeField] private GameObject explosionPrefab;
     private void Start()
     {
         Destroy(gameObject,DestroyTime);
@@ -36,10 +37,12 @@ public class bulletScript : MonoBehaviour
             if (other.transform.CompareTag("BigMeteor"))
             {
                 var position = other.transform.position;
-                Instantiate(meteorPrefab, new Vector3(position.x + 1, position.y + 1),Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
-                Instantiate(meteorPrefab, new Vector3(position.x - 1, position.y - 1), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-MeteoriteSpawner.solaDogruHiz, 0f);
+                Instantiate(meteorPrefab, new Vector3(position.x + 1, position.y + 1),Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(MeteoriteSpawner.solaDogruHiz, 0f);
+                Instantiate(meteorPrefab, new Vector3(position.x - 1, position.y - 1), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(MeteoriteSpawner.solaDogruHiz, 0f);
                         
             }
+
+            Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
         Destroy(gameObject);

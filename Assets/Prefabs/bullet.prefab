@@ -137,3 +137,4 @@ MonoBehaviour:
   speed: 30
   meteorPrefab: {fileID: 2941695037114820452, guid: 0e71b01d50b4578b8b4e56dba76f84fe, type: 3}
   bulletStrength: 25
+  explosionPrefab: {fileID: 5072388156805028519, guid: 27ae00f81b35251a99b62c6b5a9acc89, type: 3}
