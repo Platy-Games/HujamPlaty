@@ -93,7 +93,9 @@ MonoBehaviour:
   bigMeteorPrefab: {fileID: 2941695037114820452, guid: bd8bf975779249698be144b0a1b99140, type: 3}
   meteorPrefab: {fileID: 2941695037114820452, guid: 0e71b01d50b4578b8b4e56dba76f84fe, type: 3}
   enemyPrefab: {fileID: 6685627900709232980, guid: a24e3025604e74b93be0de42afea80b9, type: 3}
-  EnemyBulletsPrefab: {fileID: 0}
+  EnemyBulletsPrefab: {fileID: 2532680803445183902, guid: 167f4b17471574192b2a790422ac0609, type: 3}
+  EnemyBulletsPrefabStraight: {fileID: 2532680803445183902, guid: b79f44bb843314172ade1687fc57cfc9, type: 3}
+  explosionPrefab: {fileID: 5072388156805028519, guid: 27ae00f81b35251a99b62c6b5a9acc89, type: 3}
   flashDuration: 0.2
   flashColor: {r: 1, g: 0, b: 0, a: 1}
   shakeDuration: 0.1
@@ -111,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2532680803445183902, guid: 93675f38357ee5143a425ba02548b24f, type: 3}
-  cooldown: 0
+  cooldown: 0.3
 --- !u!1001 &5735958044474443575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249,7 +251,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5096525, y: -0.7941176}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.59, y: 0.68}
     newSize: {x: 1.86, y: 0.78}
     adaptiveTilingThreshold: 0.5
