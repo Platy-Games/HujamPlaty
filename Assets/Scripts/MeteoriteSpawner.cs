@@ -32,7 +32,7 @@ public class MeteoriteSpawner : MonoBehaviour
         // Nesneye sola doğru hız uygula
         if (rb != null)
         {
-            rb.velocity = new Vector2(-solaDogruHiz, 0f);
+            rb.velocity = new Vector2(solaDogruHiz, 0f);
         }
         else
         {

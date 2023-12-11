@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!212 &97226590 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 9065555062255949779, guid: d6ebfbe41e2b0a396b99016e01f86496, type: 3}
-  m_PrefabInstance: {fileID: 6443480258282467050}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956061544
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 7104970671296650434, guid: 8b15fd7b8c549419ca739903304cfb87, type: 3}
+      objectReference: {fileID: 7104970671296650434, guid: 550aed25b9bd54142a4c8b93112a2fc0, type: 3}
     - target: {fileID: 7410148380242996358, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: enemyPrefabs.Array.data[1]
       value: 
@@ -425,15 +420,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2902695527691387072, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: spawnSpeed
-      value: 1.2
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 3601505917430424920, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.52
+      value: -14.31
       objectReference: {fileID: 0}
     - target: {fileID: 3601505917430424920, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3601505917430424920, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -473,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397295367003540862, guid: 48ec262d70e500845b9919429c40e3db, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
