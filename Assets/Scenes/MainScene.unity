@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!212 &97226590 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9065555062255949779, guid: d6ebfbe41e2b0a396b99016e01f86496, type: 3}
+  m_PrefabInstance: {fileID: 6443480258282467050}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956061544
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +276,10 @@ PrefabInstance:
     - target: {fileID: 4184759664205330957, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184759664205330957, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5311333722380120750, guid: 19d2f915871bdc517a0b0eac5d112311, type: 3}
       propertyPath: m_LocalPosition.x
