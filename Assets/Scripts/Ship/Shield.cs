@@ -15,9 +15,9 @@ public class Shield : MonoBehaviour
 
     public int upgradeLevel = 0;
 
-    public int maxHealth = 50; // Kalkanın maksimum canı
+    public int ShieldHealth = 50; // Kalkanın maksimum canı
     public float rechargeTime = 5f; // Kalkanın yenilenme süresi
-    private int currentHealth; // Kalkanın mevcut canı
+    public int currentHealth; // Kalkanın mevcut canı
     private SpriteRenderer spriteRenderer; // Kalkanın Sprite Renderer componenti
     private CapsuleCollider2D capsuleCollider2D;
     private bool isBroken; // Kalkanın kırık olma durumu
@@ -26,20 +26,18 @@ public class Shield : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); // Sprite Renderer componentini al
         capsuleCollider2D = GetComponent<CapsuleCollider2D>();
-        currentHealth = maxHealth; // Mevcut canı maksimum cana eşitle
+        currentHealth = ShieldHealth; // Mevcut canı maksimum cana eşitle
         isBroken = false; // Kırık olma durumunu false yap
     }
     
     void Start()
     {
-         upgradeManager = FindObjectOfType<UpgradeManager>();
-
+        upgradeManager = FindObjectOfType<UpgradeManager>();
+        currentHealth = ShieldHealth; // Mevcut canı maksimum cana eşitle
+        isBroken = false; // Kırık olma durumunu false yap
+        ApplyUpgrades3();
     }
 
-   void Continue()
-   {
-    ApplyUpgrades3();
-   }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -93,7 +91,7 @@ public class Shield : MonoBehaviour
     private IEnumerator Recharge()
     {
         yield return new WaitForSeconds(rechargeTime); // Belirli bir süre bekle
-        currentHealth = maxHealth; // Mevcut canı maksimum cana eşitle
+        currentHealth = ShieldHealth; // Mevcut canı maksimum cana eşitle
         spriteRenderer.enabled = true; // Sprite Renderer'ı aktif yap
         capsuleCollider2D.enabled = true;
         isBroken = false; // Kırık olma durumunu false yap
