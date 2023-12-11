@@ -8,12 +8,14 @@ public class EnemyMovement1 : MonoBehaviour
     private Transform _target;
     public float amplitude = 1.0f; // Adjust this value for the height of the patrol movement
     public float speed = 1.0f; // Adjust this value for the speed of the patrol movement
+    GameObject BOSShip;
 
     [SerializeField] private float leftwardSpeed = 5f;
     // Start is called before the first frame update
     private void Start()
     {
         _target = GameObject.FindGameObjectWithTag("Player").transform;
+        BOSShip = GameObject.FindGameObjectWithTag("BOSShip");
     }
 
     // Update is called once per frame
@@ -39,8 +41,13 @@ public class EnemyMovement1 : MonoBehaviour
         !other.gameObject.CompareTag("Enemy"))
         {
             Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            if (!BOSShip)
+            {
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+            }
+            
+            
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
