@@ -24,11 +24,6 @@ public class DamageTaken : MonoBehaviour
             Debug.Log("Ship Health -25 New Health = " + ShipHealth);
             TakeDamage(); 
         }
-        else if (collision.CompareTag("EnemyBullets"))
-        {
-            ShipHealth -= 20;
-            Destroy(collision.gameObject);
-        }
         else if (collision.CompareTag("Meteor"))
         {
             ShipHealth -= 15;
